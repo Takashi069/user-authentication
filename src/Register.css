@@ -1,0 +1,80 @@
+#wrapper{
+    background-color: rgb(167, 82, 22);
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#Registeration{
+    background-color: rgb(244, 189, 169);
+    display: grid;
+    padding: 5%;
+    min-height: 60vh;
+    min-width: 500px;
+    border-radius: 7px;
+    row-gap: 7%;
+    grid-template-areas: 
+      "heading heading"
+      "UserNameLabel UserNameInput"
+      "EmailLabel EmailInput"
+      "PasswordLabel PasswordInput"
+      "ConfirmPasswordLabel ConfirmPasswordInput"
+      "CreateAccount CreateAccount"
+      "Back Back"
+      "WarningMessage WarningMessage"
+  }
+  #heading{
+    grid-area: heading;
+    text-align: center;
+  }
+  #RegisterUsernameLabel{
+    grid-area: UserNameLabel;
+  }
+  #RegisterUsernameInput{
+    grid-area: UserNameInput;
+  }
+  #EmailLabel{
+    grid-area: EmailLabel;
+  }
+  #EmailInput{
+    grid-area: EmailInput;
+  }
+  #passwordRegisterLabel{
+    grid-area: PasswordLabel;
+  }
+  #inputRegisterPassword{
+    grid-area: PasswordInput;
+  }
+  #passwordConfirmLabel{
+    grid-area: ConfirmPasswordLabel;
+  }
+  #ConfirmRegisterPassword{
+    grid-area: ConfirmPasswordInput;
+  }
+  #RegSubmitButton{
+    grid-area: CreateAccount;
+    font-weight: bolder;
+  }
+  #WarningMessage{
+    grid-area: WarningMessage;
+    background-color: rgba(226, 189, 51, 0.536);
+    text-align: center;
+    padding: 5%;
+    font-weight: bolder;
+  }
+  #Back{
+    grid-area: Back;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+  }
+  
+  @media only screen and (max-width:768px){
+    /*For mobile displays*/
+    #Registeration{
+        min-width: 200px;
+        min-height: 80vh;
+    }
+  }

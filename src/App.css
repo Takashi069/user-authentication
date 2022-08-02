@@ -1,38 +1,86 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.App{
+  background-color: rgb(167, 82, 22);
+  width: 100%;
   min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.login{
+  background-color: rgb(243, 97, 44);
+  width:40%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 5%;
+  border-radius: 7px;
+}
+#LoginForm{
+  background-color: rgb(244, 189, 169);
+  display: grid;
+  border-radius: 7px;
+  padding: 10%;
+  min-height: 50vh;
+  gap: 10%;
+  grid-template-areas: 
+    "Heading Heading"
+    "UserNameLabel UserNameInput"
+    "PasswordLabel PasswordInput"
+    "Submit Submit"
+    "Message Register";
+}
+label{
+  font-size: x-large;
+}
+input{
+  border-style: none;
+  padding: 3%;
+  border-radius: 10px;
+  text-align:center;
+}
+button{
+  padding:7%;
+  border-style: none;
+  background-color:bisque;
+  font-size: larger;
+  border-radius: 5px;
+}
+button:hover{
+  opacity: 0.8;
+  cursor: pointer;
+}
+#RegisterMessage{
+  grid-area: Message;
+  background-color: rgb(199, 170, 159);
+  text-align: center;
+  border-radius: 6px;
+  padding:3%;
+  font-weight: bold;
 }
 
-.App-link {
-  color: #61dafb;
+#RegisterButton{
+  grid-area: Register;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#LoginLabel{
+  grid-area: UserNameLabel;
+}
+#loginInput{
+  grid-area: UserNameInput;
+}
+#passwordLabel{
+  grid-area: PasswordLabel;
+}
+#inputPassword{
+  grid-area: PasswordInput;
+}
+#SubmitButton{
+  grid-area: Submit;
+}
+#loginHeading{
+  grid-area: Heading;
+  text-align: center;
 }
